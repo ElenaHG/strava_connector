@@ -1,12 +1,10 @@
-import os
-import json
 from api_connector.authenticator import OAuth2Authenticator
 import requests
 import pandas as pd
-from typing import Union, List
+from typing import List
 
 
-class StravaActivityMerger():
+class StravaRequestor():
 
     def __init__(self,
                  connection_path:str,
@@ -41,9 +39,7 @@ class StravaActivityMerger():
         activities_json = self.make_strava_get_request(endpoint).json()
         activities = pd.DataFrame(activities_json)
         activities['distance_km'] = activities['distance'] / 1_000
-        # selected_cols = ['id', 'name', 'distance_km', 'type', 'start_date_local', 'private', 'gear_id']
-        selected_cols = activities.columns
-        sel_activities = activities[selected_cols]\
+        sel_activities = activities\
             .sort_values(by="start_date_local", ascending=False)\
             .head(last_x_activities)
         return sel_activities
@@ -51,7 +47,8 @@ class StravaActivityMerger():
     
     def merge_and_upload_activities(self,
                                     id_list:List[int]):
+        # TODO: problem so far:
+        # Only routes are exractable via the Strava API (I do not have any routes though).
+        # You could assume every activity has a route, but this is not the case. 
+        # A route is not directly equal to the GPX sequence.
         pass
-        
-
-        

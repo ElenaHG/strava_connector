@@ -5,7 +5,6 @@ from requests.exceptions import RequestException
 import webbrowser
 from api_connector.authorization_error import AuthorizationError
 import time
-from datetime import datetime, timedelta
 
 import http.server
 import socketserver
