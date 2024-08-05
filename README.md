@@ -4,6 +4,8 @@ The Strava Connector provides tools for easy connection to the Strava API. It si
 
 Additionally, the StravaRequestor class can extract recent activities from your Strava account. This class is designed to be easily extendable, allowing for further customization and functionality enhancements. The base functionality is supposed to be extended (Work in Progress!).
 
+Please compare demo.ipynb for an example of how to use the source code.
+
 
 # Requirements
 
