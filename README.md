@@ -74,9 +74,3 @@ Here is an example of how your `secrets.json` file should be structured. Copy th
   "client_secret": "<your client secret hash (str)>"
 }
 ```
-
-
-## Additional Tips:
-
-- Make sure you have Python and `pip` installed on your machine.
-- It's a good practice to verify that your `requirements.txt` is up to date with all the necessary dependencies for your project.
