@@ -1,3 +1,8 @@
+# Remark
+
+This application is work in progress. I initially wanted to create a tool to easily fuse routes together, because I accidentially saved activities in between. 
+However, Strava's API currently does not provide the necessary functionality for non-premium members.
+
 # Strava Connector
 
 The Strava Connector provides tools for easy connection to the Strava API. It simplifies the OAuth2 authentication process for the Strava API and handles requests to obtain access and refresh tokens.
