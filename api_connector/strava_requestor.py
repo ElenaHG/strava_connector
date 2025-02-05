@@ -48,7 +48,6 @@ class StravaRequestor():
     def merge_and_upload_activities(self,
                                     id_list:List[int]):
         # TODO: problem so far:
-        # Only routes are exractable via the Strava API (I do not have any routes though).
-        # You could assume every activity has a route, but this is not the case. 
-        # A route is not directly equal to the GPX sequence.
+        # Only routes are extractable via the Strava API (I do not have any routes though because I am not a premium Strava member).
+        # A route is also not the same as GPX sequences
         pass
